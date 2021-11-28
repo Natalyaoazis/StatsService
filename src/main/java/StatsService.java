@@ -39,9 +39,8 @@ public class StatsService {
 
     public int culcCountOfMonthWithMinProducts(int [] products) {
         int month = 0;
-        int sevSum = culculateSumToMe(products) / products.length;
         for (int product : products) {
-            if (product <= sevSum) {
+            if (product <= culcSeverageAmount(products)) {
                 month = month + 1;
             }
         }
@@ -50,9 +49,8 @@ public class StatsService {
 
     public int culcCountOfMonthWithMaxProducts(int [] products) {
         int month = 0;
-        int sevSum = culculateSumToMe(products) / products.length;
         for (int product : products) {
-            if (product >= sevSum) {
+            if (product >= culcSeverageAmount(products)) {
                 month = month + 1;
             }
         }
