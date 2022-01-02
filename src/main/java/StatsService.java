@@ -39,8 +39,9 @@ public class StatsService {
 
     public int culcCountOfMonthWithMinProducts(int [] products) {
         int month = 0;
+        int sever = culcSeverageAmount(products);
         for (int product : products) {
-            if (product <= culcSeverageAmount(products)) {
+            if (product <= sever) {
                 month = month + 1;
             }
         }
@@ -49,8 +50,9 @@ public class StatsService {
 
     public int culcCountOfMonthWithMaxProducts(int [] products) {
         int month = 0;
+        int sever = culcSeverageAmount(products);
         for (int product : products) {
-            if (product >= culcSeverageAmount(products)) {
+            if (product >= sever) {
                 month = month + 1;
             }
         }
